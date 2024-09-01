@@ -1,111 +1,73 @@
-# Narc-scorer
+# Relationship Screening Questionnaire
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relationship Screening Questionnaire</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Relationship Screening Questionnaire</h1>
-        <form id="questionnaire">
-            <div class="question">
-                <p>1. Does this person often dominate conversations and rarely show interest in what others have to say?</p>
-                <label><input type="radio" name="q1" value="3"> Often</label>
-                <label><input type="radio" name="q1" value="2"> Sometimes</label>
-                <label><input type="radio" name="q1" value="1"> Rarely</label>
-                <label><input type="radio" name="q1" value="0"> Never</label>
-            </div>
-            <!-- Repeat similar structure for other questions -->
-            <!-- Add additional questions here -->
-            
-            <button type="button" onclick="calculateScore()">Submit</button>
-        </form>
-        <div id="result"></div>
-    </div>
+This is a simple web-based application to help users identify potential red flags in their relationships by answering a series of questions. The application calculates a score based on the responses and provides feedback to the user.
 
-    <script src="script.js"></script>
-</body>
-</html>
+## Features
 
+- *Interactive Questionnaire*: Users can answer questions about their relationship dynamics.
+- *Real-Time Scoring*: The app calculates a score based on user responses and provides immediate feedback.
+- *Guidance*: Depending on the score, the app offers guidance on what the score might mean and suggests considering professional advice if needed.
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 20px;
-}
+## Demo
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    background: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+You can view a live demo of the questionnaire [here](https://your-username.github.io/your-repository-name/).
 
-h1 {
-    text-align: center;
-    color: #4CAF50;
-}
+## How to Use
 
-.question {
-    margin-bottom: 15px;
-}
+1. Visit the [live demo link](https://your-username.github.io/your-repository-name/).
+2. Answer each question by selecting the most appropriate response.
+3. Click the *Submit* button to view your total score and the feedback provided.
 
-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
+## Installation
 
-button:hover {
-    background-color: #45a049;
-}
+To run the project locally, follow these steps:
 
-#result {
-    margin-top: 20px;
-    font-size: 18px;
-    text-align: center;
-}
+1. Clone the repository:
 
+    bash
+    git clone https://github.com/your-username/your-repository-name.git
+    
 
+2. Navigate into the project directory:
 
+    bash
+    cd your-repository-name
+    
 
-function calculateScore() {
-    let totalScore = 0;
-    const form = document.getElementById('questionnaire');
+3. Open the index.html file in a web browser:
 
-    // Get the values of each question's selected option
-    for (let i = 1; i <= 1; i++) {  // Adjust the loop to match the number of questions
-        const question = form['q' + i];
-        for (let j = 0; j < question.length; j++) {
-            if (question[j].checked) {
-                totalScore += parseInt(question[j].value);
-                break;
-            }
-        }
-    }
+    bash
+    open index.html
+    
 
-    // Display the result
-    const resultDiv = document.getElementById('result');
-    let resultMessage;
+    or manually open it using your file explorer.
 
-    if (totalScore >= 15) {  // Adjust these ranges based on actual questionnaire
-        resultMessage = "High score: There are significant red flags. Consider seeking advice.";
-    } else if (totalScore >= 7) {
-        resultMessage = "Moderate score: Some concerning behaviors are present.";
-    } else {
-        resultMessage = "Low score: Few red flags, indicating healthier relationship dynamics.";
-    }
+## Files in This Project
 
-    resultDiv.textContent = "Your total score is: " + totalScore + ". " + resultMessage;
-}
+- *index.html*: The main HTML file that contains the structure of the questionnaire.
+- *styles.css*: A CSS file for styling the questionnaire to make it look clean and user-friendly.
+- *script.js*: A JavaScript file that handles the logic for calculating the score and displaying the result.
+
+## Contributing
+
+If you'd like to contribute to this project:
+
+1. Fork the repository.
+2. Create a new branch for your feature (git checkout -b feature-name).
+3. Make your changes.
+4. Commit your changes (git commit -m "Add feature").
+5. Push to the branch (git push origin feature-name).
+6. Create a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Inspired by common relationship dynamics and the desire to provide tools that can help individuals make informed decisions about their relationships.
+
+## Disclaimer
+
+- This tool is for informational purposes only and is not intended to diagnose or replace professional advice. If you have concerns about your relationship, please consult a licensed mental health professional.
+-
