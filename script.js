@@ -18,17 +18,21 @@ function calculateScore() {
     // Display the result
     const resultDiv = document.getElementById('result');
     let resultMessage;
+    let flagIcons = "";
 
     // Calculate score ranges based on the total possible score
     // Max possible score is 90 (30 questions * 3 points each)
     if (totalScore >= 60) {  // High score range (adjust based on the total possible score)
         resultMessage = "High score: There are significant red flags. Consider seeking advice.";
+        flagIcons = "🚩🚩🚩";  // Three red flags for high score
     } else if (totalScore >= 30) {  // Moderate score range
         resultMessage = "Moderate score: Some concerning behaviors are present.";
+        flagIcons = "🚩🚩";  // Two red flags for moderate score
     } else {  // Low score range
         resultMessage = "Low score: Few red flags, indicating healthier relationship dynamics.";
+        flagIcons = "🚩";  // One red flag for low score
     }
 
-    // Display the total score and the corresponding message
-    resultDiv.textContent = "Your total score is: " + totalScore + ". " + resultMessage;
+    // Display the total score, corresponding message, and red flag icons
+    resultDiv.textContent = "Your total score is: " + totalScore + ". " + resultMessage + " " + flagIcons;
 }
