@@ -10,6 +10,7 @@
     <div class="container">
         <h1>Relationship Screening Questionnaire</h1>
         <form id="questionnaire">
+            <!-- Existing Questions (1-5) -->
             <!-- Question 1 -->
             <div class="question">
                 <p>1. Does this person often dominate conversations and rarely show interest in what others have to say?</p>
@@ -55,7 +56,27 @@
                 <label><input type="radio" name="q5" value="0"> Supportive and empathetic</label>
             </div>
 
-            <!-- Add more questions here using the same format -->
+            <!-- New Question 6 -->
+            <div class="question">
+                <p>6. How quickly did this person express intense feelings or use terms like "soulmate" or "destiny"?</p>
+                <label><input type="radio" name="q6" value="3"> Almost immediately, within days or weeks.</label>
+                <label><input type="radio" name="q6" value="2"> After a few months.</label>
+                <label><input type="radio" name="q6" value="1"> Only after we got to know each other well.</label>
+                <label><input type="radio" name="q6" value="0"> They haven't used those terms.</label>
+            </div>
+
+            <!-- Add all new questions following the same structure -->
+            
+            <!-- Example for New Question 7 -->
+            <div class="question">
+                <p>7. Does this person often tell you that you're the only one who truly understands them, even early on in the relationship?</p>
+                <label><input type="radio" name="q7" value="3"> Yes, frequently, from the beginning.</label>
+                <label><input type="radio" name="q7" value="2"> Occasionally, but not excessively.</label>
+                <label><input type="radio" name="q7" value="1"> Rarely, only in deeper conversations.</label>
+                <label><input type="radio" name="q7" value="0"> No, they haven't expressed that.</label>
+            </div>
+
+            <!-- Continue adding up to Question 30 -->
 
             <button type="button" onclick="calculateScore()">Submit</button>
         </form>
