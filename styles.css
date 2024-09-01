@@ -23,6 +23,16 @@ h1 {
     margin-bottom: 15px;
 }
 
+.question p {
+    margin: 0 0 10px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin: 5px 0;
+}
+
 button {
     display: block;
     width: 100%;
@@ -31,6 +41,7 @@ button {
     color: white;
     border: none;
     cursor: pointer;
+    font-size: 16px;
 }
 
 button:hover {
@@ -41,4 +52,5 @@ button:hover {
     margin-top: 20px;
     font-size: 18px;
     text-align: center;
+    font-weight: bold;
 }
